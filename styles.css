@@ -17,7 +17,7 @@ body {
     font-family: "Saira Extra Condensed", sans-serif;
     font-family: "Saira Condensed", sans-serif;
     background-color: #f0f0f0;
-    overflow: hidden; /* Hide horizontal scrollbar */
+    overflow: hidden;
 }
 
 
@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
@@ -47,7 +48,7 @@ body {
     /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    background-color: #00000055;
+    background-color: #00000085;
     padding: 20px;
     border-radius: 5px;
     text-align: left;
@@ -312,11 +313,11 @@ img {
   
 
 nav {
-    background-color: #3d3d3d00; /* Set your desired navigation background color */
+    background-color: #11111190; /* Set your desired navigation background color */
     padding: 10px;
     text-align: center;
     position: relative;
-    margin: 6px;
+    margin: 0px;
     /* transition: top 0.3s; Add smooth transition effect */
 }
 
@@ -355,6 +356,10 @@ nav {
 .bg-dark{
     background-color: #00000000;
     --bs-bg-opacity: 0;
+}
+
+.navbar-toggler-icon{
+    background-color: #0003;
 }
 
 /* nav a {
@@ -437,8 +442,17 @@ nav a:hover {
         width: auto;
     }
 } */
+@media (max-height: 660px) {
+    body{
+        overflow: auto;
+    }
+}
 
 @media (max-width: 660px) {
+
+    body{
+        overflow:auto;
+    }
     /* Hide the nav-links when screen size is smaller */
     .nav-fixed {
         display: none;
@@ -464,7 +478,7 @@ nav a:hover {
     p {
         font-size: 18px;
         margin-bottom: 0;
-        font-weight: 200;
+        font-weight: 300;
     }
 
     .arrow-buttons {
